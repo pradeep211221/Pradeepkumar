@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navbar and Sidebar Example</title>
+    <style>
+        /* Navbar styling */
+        .navbar {
+            background-color: #333;
+            overflow: hidden;
+            padding: 10px 0;
+        }
+
+        .navbar a {
+            font-size: 16px;
+            color: white;
+            text-decoration: none;
+            margin: 0 20px;
+        }
+
+        .navbar a:hover {
+            background-color: #555;
+        }
+
+        /* Sidebar styling */
+        .sidebar {
+            height: 100%;
+            width: 200px;
+            position: fixed;
+            top: 0;
+            left: -220px;
+            background-color: #333;
+            padding-top: 20px;
+            transition: left 0.3s;
+        }
+
+        .sidebar a {
+            padding: 10px 15px;
+            text-decoration: none;
+            font-size: 18px;
+            color: white;
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        .sidebar a:hover {
+            background-color: #555;
+        }
+
+        .sidebar.active {
+            left: 0;
+        }
+
+        /* Content area */
+        .content {
+            margin-left: 220px;
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="navbar">
+    <a href="#register">Register</a>
+    <a href="#student-login">Student Login</a>
+    <a href="#admin-login">Admin Login</a>
+    <a href="#about">About</a>
+</div>
+
+<!-- Sidebar Toggle Button -->
+<button onclick="toggleSidebar()">Toggle Sidebar</button>
+
+<!-- Sidebar -->
+<div class="sidebar">
+    <a href="#dashboard">Dashboard</a>
+    <a href="#faculty">Faculty</a>
+    <a href="#student">Student</a>
+    <a href="#feedback">Feedback</a>
+</div>
+
+<!-- Content area -->
+<div class="content">
+    <h1>Welcome to Your Website</h1>
+    <p>This is the main content of your website.</p>
+</div>
+
+<script>
+    // Function to toggle the sidebar
+    function toggleSidebar() {
+        var sidebar = document.querySelector('.sidebar');
+        sidebar.classList.toggle('active');
+    }
+</script>
+
+</body>
+</html>
